@@ -34,6 +34,10 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.19.1</version>
                 <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>target/test-classes/${TestRunner}</suiteXmlFile>
+                    </suiteXmlFiles>
+
                     <redirectTestOutputToFile>true</redirectTestOutputToFile>
                     <systemPropertyVariables>
                         <param>Test</param>
@@ -45,6 +49,10 @@
             </plugin>
         </plugins>
     </build>
+    <properties>
+        <TestRunner>MyProfile.xml</TestRunner>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
 
 
