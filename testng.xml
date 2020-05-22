@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parallel test suite" parallel="classes" thread-count="1">
+    <test name="Smart Locum Tenens - Node - 1">
+
+        <classes>
+
+
+            <class name="TS.LoginTC"></class>
+            <class name="TS.MyProfileTC"></class>
+            <class name="TS.CredentialDocsTC"></class>
+            <class name="TS.LicenseTC"></class>
+            <class name="TS.StateControlledSubstanceTC"></class>
+            <class name="TS.DEATC"></class>
+            <class name="TS.Medicare_Medicaid_NPI_TC"></class>
+            <class name="TS.SpecialtyTC"></class>
+
+
+            <!--        <class name="LoginTestCases.RegisterHealthcareProfTC">
+
+
+                    </class>-->
+
+        </classes>
+    </test>
+</suite>
