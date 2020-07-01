@@ -106,7 +106,7 @@ public class BaseTest{
     //private void getLocalDriver(String browserName, String driverPath) {
     private void getLocalDriver(String browserName) {
         if (browserName.equalsIgnoreCase("chrome")) {
-            WebDriverManager.chromedriver().version("81").setup();
+            WebDriverManager.chromedriver().version("83").setup();
 //System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\drivers\\chromedriver_79.16\\chromedriver.exe");
             driver=new ChromeDriver();
         } else if (browserName.equalsIgnoreCase("firefox")) {

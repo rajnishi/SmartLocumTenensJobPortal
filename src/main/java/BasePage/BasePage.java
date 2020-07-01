@@ -85,11 +85,9 @@ public class BasePage {
             webElementObj.click();
 
             Thread.sleep(2000);
-
             WebElement webElementObj1 = (new WebDriverWait(driver, 90))
                     .until(ExpectedConditions.visibilityOfElementLocated(valxpath));
             webElementObj1.click();
-
             return true;
         } catch (Exception e) {
             e.printStackTrace();
@@ -136,7 +134,7 @@ public class BasePage {
     ////////////////Method for Toast message/////////
 
     public String findText(By by){
-        WebElement webL = (new WebDriverWait(driver, 60))
+        WebElement webL = (new WebDriverWait(driver, 120))
                 .until(ExpectedConditions.visibilityOfElementLocated(by));
         String text = webL.getText();
         return text;

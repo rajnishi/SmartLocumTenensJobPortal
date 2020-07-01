@@ -11,8 +11,9 @@ public class SpecialtyPO extends BasePage {
     }
     //*****************Locators of Medicare/Medicaid/NPI tab************//
     public By DropDownPU_xpath = By.xpath("//span[@class = 'name']");
-    public By CreInfo_xpath = By.xpath("//a[contains(text(), 'Credential Info')]");
+    public By CreInfo_xpath = By.xpath("//a[contains(text(), 'Credentialing Information')]");
     public By SpecialtyTab_xpath = By.xpath("//a[contains(text(), 'Specialty')]");
+    public By SpecialtyAddNew_xpath = By.xpath("//span[text() = ' Add New ']");
 
 
     public By Specialty_xpath = By.xpath("//mat-select[@name = 'specialityId']");
@@ -49,8 +50,8 @@ public class SpecialtyPO extends BasePage {
     public By DtRecertiDayDt_xpath = By.xpath("//td[@aria-label = 'May 15, 2021']");
 
     public By AddBtn_xpath = By.xpath("//button[@type='submit']");
-    public By ToastMessageSpec_xpath = By.xpath("//div[@aria-label ='Credentialing specialty inserted successfully.']");
-    public By SaveContinue_xpath = By.xpath("//button[@title='Save']");
+    public By ToastMessageSpec_xpath = By.xpath("//div[@aria-label='A new specialty has been successfully created.']");
+    public By SaveContinue_xpath = By.xpath("//span[contains((text()), 'Save & Continue')]");
 
 
 }

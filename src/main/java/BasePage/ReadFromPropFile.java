@@ -27,6 +27,7 @@ public class ReadFromPropFile {
     public String getPwd(){ return properties.getProperty("password");    }
     public String getPath(){return properties.getProperty("loadDriverPath");    }
 
+
     //************************Registration Page + Profile Page************************//
 
     public String getFacilityName(){return properties.getProperty("facilityName");    }
@@ -58,18 +59,38 @@ public class ReadFromPropFile {
     public String getPlaintiiLN(){return properties.getProperty("plaintiffLN");    }
     public String getAmtPaid(){return properties.getProperty("amtpaid");    }
     public String getPhone(){return properties.getProperty("phone");    }
+
     public String getInstiAddress(){return properties.getProperty("Instiaddress");    }
     public String getInstiCity(){return properties.getProperty("Insticity");    }
     public String getInstiZip(){return properties.getProperty("Instizip");    }
 
-    public String getInstiName(){return properties.getProperty("institutionname");    }
+    public String getInstiName(){return properties.getProperty("institutionname");}
+
+    public String getHospitalName(){return properties.getProperty("hospitalname");}
+    public String getFax(){return properties.getProperty("fax");}
+    public String getDepartment(){return properties.getProperty("department");}
+    public String getOfficephone(){return properties.getProperty("officephone");}
+
+    public String getEmployer(){return properties.getProperty("employer");}
+    public String getPosition(){return properties.getProperty("position");}
+
+    public String getFirstName2(){return properties.getProperty("firstname");}
+    public String getLastName2(){return properties.getProperty("lastname");}
+    public String getSpecialty(){return properties.getProperty("specialty");}
+    public String getrelationship(){return properties.getProperty("relationship");}
+    public String getEmail2(){return properties.getProperty("email2");}
+    public String getAddress2(){return properties.getProperty("address2");}
+    public String getCity2(){return properties.getProperty("city2");}
+    public String getState2(){return properties.getProperty("state2");}
+    public String getZip2(){return properties.getProperty("zip2");}
+
 
     //***************************************************************************************//
     public static void main(String[] args) {
         ReadFromPropFile readFromPropFileRegiProObj = new ReadFromPropFile("RegiProfileConfig.properties");
-        ReadFromPropFile readFromPropFileConfigObj = new ReadFromPropFile("Config.properties");
+        ReadFromPropFile readFromPropFileConfigObj = new ReadFromPropFile("SuperAdminConfig.properties");
 
         System.out.println("Print last name: " + readFromPropFileRegiProObj.getLastName());
-        System.out.println("Browser Name: " + readFromPropFileConfigObj.getBrowser());
+        System.out.println("URL Link : " + readFromPropFileConfigObj.getUrl());
     }
 }

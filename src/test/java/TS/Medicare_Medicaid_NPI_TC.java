@@ -21,7 +21,7 @@ public class Medicare_Medicaid_NPI_TC extends BaseTest {
         Medicare_Medicaid_NPI_PO npipoObj = new Medicare_Medicaid_NPI_PO(driver);
 
         //*****************Credentialing Info - Medicare/Medicaid/NPI Tab*********************//
-        ExtentTestManager.getTest().getTest().setName("SMT-007: Verify Medicare Medicaid NPI ");
+        ExtentTestManager.getTest().getTest().setName("SMT-012: Verify Medicare Medicaid NPI ");
         //1. Click dropdown arrow on profile user
         Assert.assertTrue(npipoObj.clickOnLinkBtn(npipoObj.DropDownPU_xpath), "Unable to click on profile user dropdown");
         ExtentTestManager.getTest().log(LogStatus.PASS, "Click on dropdown arrow on profile user ", "User able to click on dropdown arrow on profile user");
@@ -33,6 +33,10 @@ public class Medicare_Medicaid_NPI_TC extends BaseTest {
         //3. Click on Medicare/Medicaid/NPI tab
         Assert.assertTrue(npipoObj.clickOnLinkBtn(npipoObj.NPITab_xpath), "Unable to click on Medicare/Medicaid/NPI  tab");
         ExtentTestManager.getTest().log(LogStatus.PASS, "Click on Medicare/Medicaid/NPI tab ", "User able to click on Medicare/Medicaid/NPI tab");
+
+        //3. Click on Add new btn
+        Assert.assertTrue(npipoObj.clickOnLinkBtn(npipoObj.NPIAddNew_xpath), "Unable to click on add new btn");
+        ExtentTestManager.getTest().log(LogStatus.PASS, "Click on add new btn ", "User able to click on add new btn");
 
         //4. Click on Type dropdown to select option
         Thread.sleep(2000);
@@ -48,7 +52,7 @@ public class Medicare_Medicaid_NPI_TC extends BaseTest {
         ExtentTestManager.getTest().log(LogStatus.PASS, "Click on Add button ", "User successfully able to add NPI number");
 
         //7. User should be able to add license AND should display message of License inserted successfully
-        String expectedMessage = "Credentialing medicare/medicaid/npi has been inserted successfully.";
+        String expectedMessage = "A new medicare/medicaid/npi has been successfully created.";
         Assert.assertEquals(npipoObj.findText(npipoObj.ToastMessageNPI_xpath), expectedMessage);
         ExtentTestManager.getTest().log(LogStatus.PASS, "Capture the successful message of Medicare/Medicaid/NPI", "User is able to add Medicare/Medicaid/NPI successfully");
         System.out.println("Message : " + npipoObj.findText(npipoObj.ToastMessageNPI_xpath));

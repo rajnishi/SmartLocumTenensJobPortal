@@ -9,8 +9,10 @@ public class StateControlledSubstancePO extends BasePage {
 
     //////Locators for State Controlled Substance page/////////
     public By DropDownPU_xpath = By.xpath("//span[@class = 'name']");
-    public By CreInfo_xpath = By.xpath("//a[contains(text(), 'Credential Info')]");
-    public By SCSTab_xpath = By.xpath("//a[contains(text(), 'State Controlled Substance')]");
+    public By CreInfo_xpath = By.xpath("//a[contains(text(), 'Credentialing Information')]");
+    public By SCSTab_xpath = By.xpath("//a[contains(text(), 'State Controlled Substance License(s)')]");
+    public By SCSAddNew_xpath = By.xpath("//span[text() = ' Add New ']");
+
     public By SCSIDDD_xpath = By.xpath("//mat-select[@name = 'substanceId']");
     public By StateDD_xpath = By.xpath("//span[contains(text(),'New York')]");
     public By LicenseNum_xpath = By.xpath("//input[@name='licenceNumber']");
@@ -32,7 +34,7 @@ public class StateControlledSubstancePO extends BasePage {
     public By RestriDiscipAct_xpath = By.xpath("(//span[@class = 'switch-label'])");
     public By Explan_xpath = By.xpath("//textarea[@name = 'explanation']");
     public By AddBtn_xpath = By.xpath("//button[@type= 'submit']");
-    public By ToastMessage_xpath = By.xpath("//div[@aria-label= 'Credentialing  state license substance inserted successfully.']");
-    public By SaveContinueBtn_xpath = By.xpath("//button[@title = 'Save']");
+    public By ToastMessage_xpath = By.xpath("//div[@aria-label= 'A new state controlled substance license entry has been successfully created.']");
+    public By SaveContinueBtn_xpath = By.xpath("//span[contains((text()), 'Save & Continue')]");
 
 }

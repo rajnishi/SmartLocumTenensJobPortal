@@ -20,7 +20,7 @@ public class LicenseTC extends BaseTest {
         LicensePO licensePOObj = new LicensePO(driver);
 
         //*****************Credentialing Info - License Tab*********************//
-        ExtentTestManager.getTest().getTest().setName("SMT-004: Verify License");
+        ExtentTestManager.getTest().getTest().setName("SMT-009: Verify License");
         //1. Click dropdown arrow on profile user
         Assert.assertTrue(licensePOObj.clickOnLinkBtn(licensePOObj.DropDownPU_xpath), "Unable to click on profile user dropdown");
         ExtentTestManager.getTest().log(LogStatus.PASS, "Click on dropdown arrow on profile user ", "User able to click on dropdown arrow on profile user");
@@ -28,6 +28,14 @@ public class LicenseTC extends BaseTest {
         //2. Click ""Credential Info"" link
         Assert.assertTrue(licensePOObj.clickOnLinkBtn(licensePOObj.CreInfo_xpath), "Unable to click on Credential Info link");
         ExtentTestManager.getTest().log(LogStatus.PASS, "Click on Credential Info link ", "User able to click on Credential Info link");
+
+        //3. Click on Residency tab
+        Assert.assertTrue(licensePOObj.clickOnLinkBtn(licensePOObj.Lic_xpath), "Unable to click on fellowship tab");
+        ExtentTestManager.getTest().log(LogStatus.PASS, "Click on fellowship tab ", "User able to click on Fellowship tab");
+
+        //2. Click ""Credential Info"" link
+        Assert.assertTrue(licensePOObj.clickOnLinkBtn(licensePOObj.AddLic_xpath), "Unable to click on add licence");
+        ExtentTestManager.getTest().log(LogStatus.PASS, "Click on add licence ", "User able to click on add licence");
 
         //3.Select ""License"" from menu
         //4.Select state license from drop down list
@@ -39,7 +47,7 @@ public class LicenseTC extends BaseTest {
         ExtentTestManager.getTest().log(LogStatus.PASS, "Enter license number", "User able to enter license number");
 
         //6.Select issue date
-        Thread.sleep(2000);
+        //Thread.sleep(2000);
         Assert.assertTrue(licensePOObj.clickOnLinkBtn(licensePOObj.IssueDtOpenCal_xpath), "Unable to click on Issue Date calender");
         ExtentTestManager.getTest().log(LogStatus.PASS, "click on to open the Issue Date calender ", "User able to open the Issue Date calender");
 
@@ -60,7 +68,7 @@ public class LicenseTC extends BaseTest {
         ExtentTestManager.getTest().log(LogStatus.PASS, "click on to uncheck 'No End Date' option ", "User able to click on to uncheck 'No End Date' option");*/
 
         //8.Select ""Expiration date""
-        Thread.sleep(2000);
+       // Thread.sleep(2000);
         Assert.assertTrue(licensePOObj.clickOnLinkBtn(licensePOObj.NoExDtOpenCal_xpath), "Unable to click on Expiration Date calender");
         ExtentTestManager.getTest().log(LogStatus.PASS, "click on to open the Expiration Date calender ", "User able to open the Expiration Date calender");
 
@@ -89,7 +97,8 @@ public class LicenseTC extends BaseTest {
         ExtentTestManager.getTest().log(LogStatus.PASS, "Click on add button", "User able to click on add button");
 
         //12. User should be able to add license AND should display message of License inserted successfully
-        String expectedMessage = "This license has been successfully inserted.";
+        Thread.sleep(2000);
+        String expectedMessage = "A new license entry has been successfully created.";
         Assert.assertEquals(licensePOObj.findText(licensePOObj.ToastMessage_xpath), expectedMessage);
         ExtentTestManager.getTest().log(LogStatus.PASS, "Capture the successful message of add license ", "User is able to add license successfully");
         System.out.println("Message : " + licensePOObj.findText(licensePOObj.ToastMessage_xpath));

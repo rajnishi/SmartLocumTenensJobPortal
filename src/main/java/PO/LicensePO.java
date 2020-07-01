@@ -9,9 +9,12 @@ public class LicensePO extends BasePage {
 
     //////Locators for License page///////////
     public By DropDownPU_xpath = By.xpath("//span[@class = 'name']");
-    public By CreInfo_xpath = By.xpath("//a[contains(text(), 'Credential Info')]");
+    public By CreInfo_xpath = By.xpath("//a[contains(text(), 'Credentialing Information')]");
+    public By Lic_xpath = By.xpath("//a[contains(text(), 'License(s)')]");
+    public By AddLic_xpath = By.xpath("//span[text() = ' Add New ']");
+
     public By LicStateIDDD_xpath = By.xpath("//mat-select[@name = 'stateLicenceId']");
-    public By LicStateDD_xpath = By.xpath("//span[contains(text(),'New York')]");
+    public By LicStateDD_xpath = By.xpath("//span[contains(text(),' New Mexico ')]");
     public By LicenseNum_xpath = By.xpath("//input[@name= 'licenceNumber']");
 
     public By IssueDtOpenCal_xpath = By.xpath("(//button[@aria-label= 'Open calendar'])[1]");
@@ -31,8 +34,8 @@ public class LicensePO extends BasePage {
     public By RestriDiscipAct_xpath = By.xpath("(//span[@class = 'switch-label'])");
     public By Explan_xpath = By.xpath("//textarea[@name = 'explanation']");
     public By AddBtn_xpath = By.xpath("//button[@type= 'submit']");
-    public By ToastMessage_xpath = By.xpath("//div[@aria-label= 'This license has been successfully inserted.']");
-    public By SaveContinueBtn_xpath = By.xpath("//button[@title = 'Save']");
+    public By ToastMessage_xpath = By.xpath("//div[@aria-label= 'A new license entry has been successfully created.']");
+    public By SaveContinueBtn_xpath = By.xpath("//span[contains((text()), 'Save & Continue')]");
 
 
 

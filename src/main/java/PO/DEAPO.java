@@ -9,8 +9,9 @@ public class DEAPO extends BasePage {
 
     //////Locators for DEA page /////////
     public By DropDownPU_xpath = By.xpath("//span[@class = 'name']");
-    public By CreInfo_xpath = By.xpath("//a[contains(text(), 'Credential Info')]");
+    public By CreInfo_xpath = By.xpath("//a[contains(text(), 'Credentialing Information')]");
     public By DEATab_xpath = By.xpath("//a[contains(text(), 'DEA')]");
+    public By DEAAddNew_xpath = By.xpath("//span[text() = ' Add New ']");
     public By DEANum_xpath = By.xpath("//input[@name ='deaNumber']");
 
     public By IssueDtOpenCal_xpath = By.xpath("(//button[@aria-label= 'Open calendar'])[1]");
@@ -30,9 +31,7 @@ public class DEAPO extends BasePage {
     public By ResDiscipAct_xpath = By.xpath("(//span[@class = 'switch-label'])");
     public By Explan_xpath = By.xpath("//textarea[@name = 'explanation']");
     public By AddBtn_xpath = By.xpath("//button[@type= 'submit']");
-    public By ToastMessage_xpath = By.xpath("//div[@aria-label= 'This DEA has been successfully inserted.']");
+    public By ToastMessage_xpath = By.xpath("//div[@aria-label='A new DEA entry has been successfully created.']");
     public By SaveContinueBtn_xpath = By.xpath("//span[contains(text(), 'Save & Continue')]");
-
-
 
 }

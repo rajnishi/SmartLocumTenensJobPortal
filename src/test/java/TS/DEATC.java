@@ -28,7 +28,7 @@ public class DEATC extends BaseTest {
 
 
         //*****************Credentialing Info - DEA Tab*********************//
-        ExtentTestManager.getTest().getTest().setName("SMT-006: Verify DEA ");
+        ExtentTestManager.getTest().getTest().setName("SMT-011: Verify DEA ");
         //1. Click dropdown arrow on profile user
         Assert.assertTrue(deapoObj.clickOnLinkBtn(deapoObj.DropDownPU_xpath), "Unable to click on profile user dropdown");
         ExtentTestManager.getTest().log(LogStatus.PASS, "Click on dropdown arrow on profile user ", "User able to click on dropdown arrow on profile user");
@@ -40,6 +40,10 @@ public class DEATC extends BaseTest {
         //3.Select ""DEA"" from menu
         Assert.assertTrue(deapoObj.clickOnLinkBtn(deapoObj.DEATab_xpath), "Unable to click on DEA link");
         ExtentTestManager.getTest().log(LogStatus.PASS, "Click on DEA link ", "User able to click on DEA link");
+
+        //3.Select ""Add new btn""
+        Assert.assertTrue(deapoObj.clickOnLinkBtn(deapoObj.DEAAddNew_xpath), "Unable to click on add new btn");
+        ExtentTestManager.getTest().log(LogStatus.PASS, "Click on add new btn ", "User able to click on add new btn");
 
         //5.Enter DEA number
         Assert.assertTrue(deapoObj.enterTextInInputBtn(deapoObj.DEANum_xpath, readFromPropFileSCSObj.getDEA()), "Unable to enter DEA number");
@@ -100,7 +104,8 @@ public class DEATC extends BaseTest {
         ExtentTestManager.getTest().log(LogStatus.PASS, "Click on add button", "User able to click on add button");
 
         //12. User should be able to add license AND should display message of License inserted successfully
-        String expectedMessage = "This DEA has been successfully inserted.";
+        Thread.sleep(2300);
+        String expectedMessage = "A new DEA entry has been successfully created.";
         Assert.assertEquals(deapoObj.findText(deapoObj.ToastMessage_xpath), expectedMessage);
         ExtentTestManager.getTest().log(LogStatus.PASS, "Capture the successful message of DEA", "User is able to add DEA successfully");
         System.out.println("Message : " + deapoObj.findText(deapoObj.ToastMessage_xpath));

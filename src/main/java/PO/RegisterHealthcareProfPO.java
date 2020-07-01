@@ -25,6 +25,7 @@ public class RegisterHealthcareProfPO extends BasePage {
     public By State_xpath = By.xpath("//mat-select[@name= 'stateId']");  //div[@class = 'mat-form-field-infix ng-tns-c46-13']");
     public By State1_xpath = By.xpath("//span[contains((text()), 'Connecticut')]");
     public By Zip_xpath = By.xpath("//input[@name = 'zipCode']");
+    //mat-checkbox[@name = 'isAcceptPrivacyPolicy']
     public By RegisterNow_xpath = By.xpath("//span[text()= ' Register Now ']");
     public By VerifyAcct_xpath = By.xpath("//div[contains(text(), 'Check inbox to verify your account.')]");
 

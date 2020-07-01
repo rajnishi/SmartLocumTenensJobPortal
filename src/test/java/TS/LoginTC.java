@@ -45,10 +45,10 @@ public class LoginTC extends BaseTest {
         ExtentTestManager.getTest().log(LogStatus.PASS, "Click on Sign In button to login ", "User should able to click on sign in button to login");
 
         //6. Verify if user is redirected to home page by verifying the text 'Healthcare Professional'
-        //String expectedName = "Welcome devraj";
-        String expectedName = "Welcome Raj";
+       // String expectedName = "Welcome Dev Raj";
+        String expectedName = "Welcome Jenna";
         Assert.assertEquals(loginPOObj.findText(loginPOObj.Textverify_xpath), expectedName);
-        ExtentTestManager.getTest().log(LogStatus.PASS, "Click on user logged in text to verify ", "User is redirected to home page and able to capture the text 'Welcome Raj'");
+        ExtentTestManager.getTest().log(LogStatus.PASS, "Click on user logged in text to verify ", "User is redirected to home page and able to capture the text 'Welcome Jenna'");
         System.out.println("Title is: " + loginPOObj.findText(loginPOObj.Textverify_xpath));
     }
 }

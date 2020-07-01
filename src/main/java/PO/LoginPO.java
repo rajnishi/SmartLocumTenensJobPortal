@@ -17,8 +17,8 @@ public class LoginPO extends BasePage {
     public By LoginPwd_xpath = By.xpath("//input[@name= 'password']");
     public By LoginRemMe_xpath = By.xpath("//mat-checkbox[@name = 'rememberMe']");
     public By LoginSignIn_xpath = By.xpath("(//span[text()= 'Sign In'])[2]");
-   // public By Textverify_xpath = By.xpath("//h1[text() = 'Welcome devraj']");
-    public By Textverify_xpath = By.xpath("//h1[text() = 'Welcome Raj']");
+   // public By Textverify_xpath = By.xpath("//h1[text() = 'Welcome Dev Raj']");
+    public By Textverify_xpath = By.xpath("//h1[text() = 'Welcome Jenna']");
     public By InvalidPass_xpath = By.xpath("//div[contains(text(), 'Invalid password')]"); //better to use contains rather then word
 
 

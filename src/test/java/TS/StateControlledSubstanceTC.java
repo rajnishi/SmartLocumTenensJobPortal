@@ -27,7 +27,7 @@ public class StateControlledSubstanceTC extends BaseTest {
         StateControlledSubstancePO SCSPOObj = new StateControlledSubstancePO(driver);
 
         //*****************Credentialing Info - State Controlled Substance Tab*********************//
-        ExtentTestManager.getTest().getTest().setName("SMT-005: Verify State Controlled Substance ");
+        ExtentTestManager.getTest().getTest().setName("SMT-010: Verify State Controlled Substance ");
         //1. Click dropdown arrow on profile user
         Assert.assertTrue(SCSPOObj.clickOnLinkBtn(SCSPOObj.DropDownPU_xpath), "Unable to click on profile user dropdown");
         ExtentTestManager.getTest().log(LogStatus.PASS, "Click on dropdown arrow on profile user ", "User able to click on dropdown arrow on profile user");
@@ -39,6 +39,10 @@ public class StateControlledSubstanceTC extends BaseTest {
         //3.Select ""State Controlled Substance"" from menu
         Assert.assertTrue(SCSPOObj.clickOnLinkBtn(SCSPOObj.SCSTab_xpath), "Unable to click on State Controlled Substance link");
         ExtentTestManager.getTest().log(LogStatus.PASS, "Click on State Controlled Substance link ", "User able to click on State Controlled Substance link");
+
+        //3.Select "Add New"
+        Assert.assertTrue(SCSPOObj.clickOnLinkBtn(SCSPOObj.SCSAddNew_xpath), "Unable to click on add new btn");
+        ExtentTestManager.getTest().log(LogStatus.PASS, "Click on add new btn ", "User able to click on add new btn");
 
         //4.Select ""State Controlled Substance"" from drop down list
         Assert.assertTrue(SCSPOObj.selectFromDropDownBtn(SCSPOObj.SCSIDDD_xpath, SCSPOObj.StateDD_xpath), "Unable to click on dropdown list");
@@ -105,7 +109,7 @@ public class StateControlledSubstanceTC extends BaseTest {
         ExtentTestManager.getTest().log(LogStatus.PASS, "Click on add button", "User able to click on add button");
 
         //12. User should be able to add license AND should display message of License inserted successfully
-        String expectedMessage = "Credentialing state license substance inserted successfully.";
+        String expectedMessage = "A new state controlled substance license entry has been successfully created.";
         Assert.assertEquals(SCSPOObj.findText(SCSPOObj.ToastMessage_xpath), expectedMessage);
         ExtentTestManager.getTest().log(LogStatus.PASS, "Capture the successful message of state license", "User is able to add state license successfully");
         System.out.println("Message : " + SCSPOObj.findText(SCSPOObj.ToastMessage_xpath));

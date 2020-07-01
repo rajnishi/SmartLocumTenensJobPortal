@@ -31,6 +31,10 @@ public class SpecialtyTC extends BaseTest {
         Assert.assertTrue(specialtyPOObj.clickOnLinkBtn(specialtyPOObj.SpecialtyTab_xpath), "Unable to click on Specialty  tab");
         ExtentTestManager.getTest().log(LogStatus.PASS, "Click on Specialty tab ", "User able to click on Specialty tab");
 
+        //3. Click on add new btn
+        Assert.assertTrue(specialtyPOObj.clickOnLinkBtn(specialtyPOObj.SpecialtyAddNew_xpath), "Unable to click on add new btn");
+        ExtentTestManager.getTest().log(LogStatus.PASS, "Click on add new btn ", "User able to click on add new btn");
+
         //4. Click on dropdown to select Specialty option
         Thread.sleep(2000);
         Assert.assertTrue(specialtyPOObj.selectFromDropDownBtn(specialtyPOObj.Specialty_xpath, specialtyPOObj.SpecialtyTxt_xpath), "Unable to click on drop down button of Specialty");
@@ -44,7 +48,7 @@ public class SpecialtyTC extends BaseTest {
         Assert.assertTrue(specialtyPOObj.selectFromDropDownBtn(specialtyPOObj.BCBE_xpath, specialtyPOObj.BCBEText_xpath), "Unable to click on drop down button of BC/BE ");
         ExtentTestManager.getTest().log(LogStatus.PASS, "Click on drop down button and select option from BC/BE ", "User able to click drop down button and able to select the option from BC/BE ");
 
-        //7. Click on dropdown to select Certifying Board option
+      /*  //7. Click on dropdown to select Certifying Board option
         Assert.assertTrue(specialtyPOObj.selectFromDropDownBtn(specialtyPOObj.CertifyBoard_xpath, specialtyPOObj.CertifyBoardTxt_xpath), "Unable to click on drop down button of Certifying Board ");
         ExtentTestManager.getTest().log(LogStatus.PASS, "Click on drop down button and select option from Certifying Board ", "User able to click drop down button and able to select the option from Certifying Board ");
 
@@ -68,9 +72,9 @@ public class SpecialtyTC extends BaseTest {
         Assert.assertTrue(specialtyPOObj.clickOnLinkBtn(specialtyPOObj.DtCertiDay_xpath), "Unable to select Day");
         ExtentTestManager.getTest().log(LogStatus.PASS, "click on to select day ", "User able to select day");
 
-        /*//9.Untick on ""Not Applicable checkbox""
+        //9.Untick on Not Applicable checkbox;
         Assert.assertTrue(specialtyPOObj.clickOnLinkBtn(specialtyPOObj.NoEndDate_xpath), "Unable to click on 'Not Applicable checkbox'");
-        ExtentTestManager.getTest().log(LogStatus.PASS, "click on to uncheck 'Not Applicable checkbox' option ", "User able to click unckeck 'Not Applicable checkbox' option");*/
+        ExtentTestManager.getTest().log(LogStatus.PASS, "click on to uncheck 'Not Applicable checkbox' option ", "User able to click unckeck 'Not Applicable checkbox' option");
 
         //10.Select ""Date of Recertification""
         Thread.sleep(2000);
@@ -91,13 +95,13 @@ public class SpecialtyTC extends BaseTest {
 
         Assert.assertTrue(specialtyPOObj.clickOnLinkBtn(specialtyPOObj.DtRecertiDayDt_xpath), "Unable to select Day");
         ExtentTestManager.getTest().log(LogStatus.PASS, "click on to select day ", "User able to select day");
-
+*/
         //11. Click on Add button
         Assert.assertTrue(specialtyPOObj.clickOnLinkBtn(specialtyPOObj.AddBtn_xpath), "Unable to click on add button");
         ExtentTestManager.getTest().log(LogStatus.PASS, "Click on Add button ", "User successfully able to add Specialty and Subspecialty");
 
         //12. User should be able to add license AND should display message of License inserted successfully
-        String expectedMessage = "Credentialing specialty inserted successfully.";
+        String expectedMessage = "A new specialty has been successfully created.";
         Assert.assertEquals(specialtyPOObj.findText(specialtyPOObj.ToastMessageSpec_xpath), expectedMessage);
         ExtentTestManager.getTest().log(LogStatus.PASS, "Capture the successful message of Specialty", "User is able to add Specialty successfully");
         System.out.println("Message : " + specialtyPOObj.findText(specialtyPOObj.ToastMessageSpec_xpath));

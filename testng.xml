@@ -6,13 +6,21 @@
 
 
             <class name="TS.LoginTC"></class>
-            <class name="TS.MyProfileTC"></class>
             <class name="TS.CredentialDocsTC"></class>
+            <class name="TS.MedicalEducationTC"></class>
+            <class name="TS.InternshipTC"></class>
+            <class name="TS.ResidencyTC"></class>
+            <class name="TS.FellowshipTC"></class>
+            <class name="TS.SpecialtyTC"></class>
             <class name="TS.LicenseTC"></class>
             <class name="TS.StateControlledSubstanceTC"></class>
             <class name="TS.DEATC"></class>
             <class name="TS.Medicare_Medicaid_NPI_TC"></class>
-            <class name="TS.SpecialtyTC"></class>
+            <class name="TS.WorkHistoryTC"></class>
+            <class name="TS.HospitalMembershipTC"></class>
+            <class name="TS.ProfessionalLiabilityInsuranceTC"></class>
+            <class name="TS.ProfessionalReferencesTC"></class>
+            <class name="TS.ProfessionalHistoryTC"></class>
 
 
             <!--        <class name="LoginTestCases.RegisterHealthcareProfTC">

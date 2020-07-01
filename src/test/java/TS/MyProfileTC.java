@@ -42,6 +42,9 @@ public class MyProfileTC extends BaseTest {
         Assert.assertTrue(profilePOObj.clickOnLinkBtn(profilePOObj.EditProfile_xpath), "Unable to click on edit profile tab");
         ExtentTestManager.getTest().log(LogStatus.PASS, "Click on edit profile tab ", "User able to click on edit profile tab ");
 
+        Assert.assertTrue(profilePOObj.enterTextInInputBtn(profilePOObj.Phone_xpath, readFromPropFilePPObj.getphone()), "Unable to enter address");
+        ExtentTestManager.getTest().log(LogStatus.PASS, "Enter address ", "User able to enter address ");
+
         //3.Click Browse for Upload CV
         Assert.assertTrue(profilePOObj.imageUpLoadPDF(profilePOObj.UploadCV_xpath), "Unable to click on Upload CV");
         ExtentTestManager.getTest().log(LogStatus.PASS, "Click on upload CV ", "User able to upload CV");

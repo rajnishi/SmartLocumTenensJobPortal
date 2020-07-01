@@ -18,11 +18,11 @@ public class MyProfilePO extends BasePage {
     public By UploadCV_xpath = By.xpath("//input[@id = 'userCVFile']");
     public By ProfilePho_xpath = By.xpath("//input[@id = 'customFile']");
     //  public By LastName_xpath= By.xpath("//input[@name ='lastname']");
-    // public By Phone_xpath= By.xpath("//input[@name ='phone']");
+    public By Phone_xpath= By.xpath("//input[@name ='phone']");
     public By HAdd_xpath = By.xpath("//input[@name ='address1']");
     public By HCity_xpath = By.xpath("//input[@name ='city']");
-    public By HState_xpath = By.xpath("//mat-select[@name= 'stateId']");
-    public By HState1_xpath = By.xpath("//span[contains((text()), 'Nevada')]");    //span[contains((text()), 'Maine')]
+    public By HState_xpath = By.xpath("//div[@class='//mat-select[@name='stateId']");
+    public By HState1_xpath = By.xpath("//span[contains((text()), ' Delaware ')]");    //span[contains((text()), 'Maine')]
     public By Zip_xpath = By.xpath("//input[@name= 'zipCode']");
     public By Citizenship_xpath = By.xpath("(//span[@class = 'switch-label'])[1]");
 

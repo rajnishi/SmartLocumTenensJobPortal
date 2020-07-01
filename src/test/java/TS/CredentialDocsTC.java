@@ -78,7 +78,7 @@ public class CredentialDocsTC extends BaseTest {
         ExtentTestManager.getTest().log(LogStatus.PASS, "click on to save the record", "User able to save record successfully");
 
         //10.  User should be able to add credential document and will display on the list
-        String expectedMessage = "Credential document inserted successfully.";
+        String expectedMessage = "A new credentialing document has been created.";
         Assert.assertEquals(credentialDocsPOObj.findText(credentialDocsPOObj.ToastMessage_xpath), expectedMessage);
         ExtentTestManager.getTest().log(LogStatus.PASS, "Capture the successful message of add credential doc ", "User is getting the successful message as credential doc added on the list");
         System.out.println("Message : "+ credentialDocsPOObj.findText(credentialDocsPOObj.ToastMessage_xpath));
