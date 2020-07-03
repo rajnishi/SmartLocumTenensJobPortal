@@ -15,13 +15,13 @@ public class CredentialDocsPO extends BasePage {
 
     public By IssueDtOpenCal_xpath = By.xpath("(//button[@aria-label= 'Open calendar'])[1]");
     public By IssuePrevMonth_xpath = By.xpath("//button[@aria-label= 'Previous month']");
-    public By IssueDt_xpath = By.xpath("//td[@aria-label= 'May 9, 2020']");
+    public By IssueDt_xpath = By.xpath("//td[@aria-label= 'June 9, 2020']");
 
     public By NoEndDate_xpath = By.xpath("//mat-checkbox[@name = 'IsEndDate']");
 
     public By NoExDtOpenCal_xpath = By.xpath("(//button[@aria-label= 'Open calendar'])[2]");
     public By NoExDtNextMonth_xpath = By.xpath("//button[@aria-label= 'Next month']");
-    public By NoExDt_xpath = By.xpath("//td[@aria-label= 'July 21, 2020']");
+    public By NoExDt_xpath = By.xpath("//td[@aria-label= 'August 30, 2020']");
 
     public By Desc_xpath = By.xpath("//textarea[@name = 'description']");
     public By Save_xpath = By.xpath("//span[text()=' Save ']");

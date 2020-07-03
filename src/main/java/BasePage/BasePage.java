@@ -134,7 +134,7 @@ public class BasePage {
     ////////////////Method for Toast message/////////
 
     public String findText(By by){
-        WebElement webL = (new WebDriverWait(driver, 120))
+        WebElement webL = (new WebDriverWait(driver, 1000))
                 .until(ExpectedConditions.visibilityOfElementLocated(by));
         String text = webL.getText();
         return text;
